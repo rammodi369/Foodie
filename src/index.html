@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letter of Recommendation Generator</title>
+  <script>
+    function generateRecommendationLetter() {
+      const studentName = document.getElementById("studentName").value;
+      const recommenderName = document.getElementById("recommenderName").value;
+      const position = document.getElementById("position").value;
+      const company = document.getElementById("company").value;
+      const currentDate = new Date().toDateString();
+
+      const letter = `
+      ${currentDate}
+
+      Dear Hiring Manager,
+
+      I am writing this letter to enthusiastically recommend ${studentName} for a position at ${company}. I have had the pleasure of working with ${studentName} as their ${position} 
+      at our organization, and I am impressed with their skills, dedication, and character.
+
+      ${studentName} consistently demonstrated exceptional problem-solving abilities and a 
+      strong work ethic. They are quick to grasp new concepts and have a keen attention to detail,
+       which allowed them to deliver high-quality work consistently. Moreover, their excellent communication
+        skills enabled them to collaborate effectively with team members and stakeholders.
+
+      ${studentName} is not only a talented professional but also a pleasure to work with. They are dependable
+      , reliable, and always willing to go the extra mile to ensure the success of the team. Their positive attitude 
+      and ability to adapt to new challenges make them an asset to any organization.
+
+      I am confident that ${studentName} will excel in any role they undertake. Their passion for continuous learning 
+      and personal growth ensures that they stay up-to-date with the latest industry trends and best practices.
+
+      In conclusion, I wholeheartedly recommend ${studentName} for a position at ${company}. They possess the necessary
+       skills, experience, and qualities to contribute effectively and make a positive impact. If you have any further
+        questions or require additional information, please do not hesitate to contact me.
+
+      Sincerely,
+
+      ${recommenderName}
+      ${position}
+      ${company}
+      `;
+
+      document.getElementById("result").textContent = letter;
+    }
+  </script>
+</head>
+<body>
+  <h1>Letter of Recommendation Generator</h1>
+  <form>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" required><br>
+
+    <label for="recommenderName">Recommender Name:</label>
+    <input type="text" id="recommenderName" required><br>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" required><br>
+
+    <label for="company">Company:</label>
+    <input type="text" id="company" required><br>
+
+    <button type="button" onclick="generateRecommendationLetter()">Generate Letter</button>
+  </form>
+
+  <h2>Recommendation Letter:</h2>
+  <pre id="result"></pre>
+</body>
+</html>
