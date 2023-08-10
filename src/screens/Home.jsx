@@ -7,9 +7,7 @@ import HomeCarousal from "../components/HomeCarousel";
 function Home() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+     
       <div>
         <HomeCarousal/>
       </div>

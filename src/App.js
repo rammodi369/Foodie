@@ -7,6 +7,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
+import Navbar from "./components/Navbar";
 
 import {
   BrowserRouter as Router,
@@ -16,9 +17,11 @@ import {
 } from "react-router-dom";
 import Signup from "./screens/Signup";
 
+
 function App() {
   return (
     <Router>
+    <Navbar/>
       <div>
         <Routes> 
           <Route exact path="/" element={<Home />} />
