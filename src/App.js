@@ -16,20 +16,31 @@ import {
 
 } from "react-router-dom";
 import Signup from "./screens/Signup";
+import { CartProvider } from "./components/ContextReducer";
+import Myorder from "./screens/Myorder";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
+    
+    
+   <CartProvider>
+    
     <Router>
     <Navbar/>
-      <div>
+      
         <Routes> 
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/createUser" element={<Signup />} />
+          <Route exact path="/myOrder" element={<Myorder/>}/>
         </Routes>
-      </div>
+    <Footer/>
     </Router>
+    </CartProvider>
+    
+
   );
 }
 

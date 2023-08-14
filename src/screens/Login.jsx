@@ -22,6 +22,8 @@ function Login() {
       alert("enter valid credentials or you have to signup");
     }
     if(json.success){
+      localStorage.setItem('userEmail', credentials.email)
+       console.dir(localStorage.getItem("userEmail"))
       localStorage.setItem("authToken",json.authToken);
       
       navigate("/")

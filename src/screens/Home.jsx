@@ -119,9 +119,9 @@ function Home() {
                             className="col-12 col-md-6 col-lg-3 "
                           >
                             <Card
-                              foodname={filteItems.name}
+                          foodItem={filteItems}
                               options={filteItems.options[0]}
-                              imgsrc={filteItems.img}
+                            
                             />
                           </div>
                         );
@@ -134,9 +134,7 @@ function Home() {
             })
           : ""}
       </div>
-      <div>
-        <Footer />
-      </div>
+  
     </div>
   );
 }
