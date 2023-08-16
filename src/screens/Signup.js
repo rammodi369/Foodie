@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+
 function Signup() {
     const [credentials, setfirst] = useState({ name: "", email: "", password: "", geolocation: "" });
     const navigate=useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://foodie2.onrender.com/api/createUser", {
+        const response = await fetch("http://localhost:5000/api/createUser", {
             method: "POST",
             headers: {
                 'Content-Type': "application/json"
@@ -13,16 +14,18 @@ function Signup() {
             body:JSON.stringify({
                 name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation
             })
+
         })
         const json = await response.json();
         console.log(json)
         if (!json.success) {
-            alert("Name and password should be 5 char(valid!!)");
+            alert("enter valid credentials")
         }
         else{
-            alert("success signup");
-            navigate("login");
+            alert("Success Login");
+            navigate("/login");
         }
+    }
     const onChange = (e) => {
         setfirst({ ...credentials, [e.target.name]: e.target.value })
     }
@@ -33,6 +36,7 @@ function Signup() {
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
                         <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} />
+
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -54,6 +58,5 @@ function Signup() {
         </div>
     )
 }
-}
+
 export default Signup
- 
