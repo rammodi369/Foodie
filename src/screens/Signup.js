@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
-function Signup() {
+export default function Signup() {
     const [credentials, setfirst] = useState({ name: "", email: "", password: "", geolocation: "" });
     const navigate=useNavigate();
     const handleSubmit = async (e) => {
@@ -19,9 +19,12 @@ function Signup() {
         const json = await response.json();
         console.log(json)
         if (!json.success) {
-            alert("enter valid credentials Name should atleast of 5 char")
-       
+            alert("enter valid credentials Name should atleast of 5 char");
+            
     }
+        else{
+        navigate("/login");
+        }
     const onChange = (e) => {
         setfirst({ ...credentials, [e.target.name]: e.target.value })
     }
@@ -55,4 +58,4 @@ function Signup() {
     )
 }
 
-export default Signup
+ 
