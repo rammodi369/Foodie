@@ -19,11 +19,8 @@ function Signup() {
         const json = await response.json();
         console.log(json)
         if (!json.success) {
-            alert("enter valid credentials(Name should atleast of 5 char")
-          
-        }
-        else{
-            navigate("/login")
+            alert("enter valid credentials Name should atleast of 5 char")
+       
     }
     const onChange = (e) => {
         setfirst({ ...credentials, [e.target.name]: e.target.value })
