@@ -17,10 +17,12 @@ function Signup() {
         const json = await response.json();
         console.log(json)
         if (!json.success) {
-            alert("enter valid credentials")
-          navigate("/login")
-            
-  }
+            alert("Name and password should be 5 char(valid!!)");
+        }
+        else{
+            alert("success signup");
+            navigate("login");
+        }
     const onChange = (e) => {
         setfirst({ ...credentials, [e.target.name]: e.target.value })
     }
