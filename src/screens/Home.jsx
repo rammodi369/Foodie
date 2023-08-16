@@ -97,6 +97,7 @@ function Home() {
       </Carousel.Item>
     </Carousel>
       </div>
+      <div className="ml-0 mr-0 mx-auto">
       <div className="container">
         {" "}
         {foodCat !== []
@@ -134,6 +135,7 @@ function Home() {
             })
           : ""}
       </div>
+        </div>
   
     </div>
   );
