@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-
-export default function Signup() {
+function Signup() {
     const [credentials, setfirst] = useState({ name: "", email: "", password: "", geolocation: "" });
     const navigate=useNavigate();
     const handleSubmit = async (e) => {
@@ -14,17 +13,14 @@ export default function Signup() {
             body:JSON.stringify({
                 name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation
             })
-
         })
         const json = await response.json();
         console.log(json)
         if (!json.success) {
-            alert("enter valid credentials Name should atleast of 5 char");
+            alert("enter valid credentials")
+          navigate("/login")
             
-    }
-        else{
-        navigate("/login");
-        }
+  }
     const onChange = (e) => {
         setfirst({ ...credentials, [e.target.name]: e.target.value })
     }
@@ -35,7 +31,6 @@ export default function Signup() {
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
                         <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} />
-
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -56,6 +51,8 @@ export default function Signup() {
             </div>
         </div>
     )
+}
+export default Signup
 }
 
  
