@@ -57,26 +57,16 @@ function Login() {
             <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
-{/*                <div className="input-group" id="show_hide_password">
+               <div className="input-group" id="show_hide_password">
             <input
-              type="password"
+              type="text"
               className="form-control"
               name="password"
               onChange={onChange}
            
               value={credentials.password}
-            /> */}
-            <div className=" flex ">
-            
-       <input name="password" type="password" value={credentials.password}  onChange={onChange} className="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
-              <div className="input-group-append">
-                <span className="input-group-text" onClick="password_show_hide();">
-                  <i className="fas fa-eye" id="show_eye"></i>
-                  <i className="fas fa-eye-slash d-none" id="hide_eye"></i>
-                </span>
-              </div>
-  
-            </div>
+            />
+          </div>
           </div>
 
           <button  type="submit" className=" m-3 btn btn-success">
