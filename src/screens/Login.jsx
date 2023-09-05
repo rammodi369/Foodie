@@ -34,7 +34,7 @@ function Login() {
   };
   return (
     <div>
-      <div>
+      <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
@@ -66,14 +66,17 @@ function Login() {
            
               value={credentials.password}
             /> */}
+            <div className=" flex ">
+            
        <input name="password" type="password" value={credentials.password}  onChange={onChange} className="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
               <div className="input-group-append">
-                <span className="input-group-text" onclick="password_show_hide();">
+                <span className="input-group-text" onClick="password_show_hide();">
                   <i className="fas fa-eye" id="show_eye"></i>
                   <i className="fas fa-eye-slash d-none" id="hide_eye"></i>
                 </span>
               </div>
   
+            </div>
           </div>
 
           <button  type="submit" className=" m-3 btn btn-success">
