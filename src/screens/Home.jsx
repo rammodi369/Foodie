@@ -108,6 +108,8 @@ function Home() {
                     {item.CategoryName}
                   </div>
                   <hr />
+                  <div  className="d-flex justify-content-around flex-wrap mx-auto">
+                  
                   {foodItem !== [] ? (
                     foodItem
                       .filter(
@@ -134,6 +136,7 @@ function Home() {
               );
             })
           : ""}
+                  </div>
       </div>
         </div>
   
