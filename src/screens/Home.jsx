@@ -108,7 +108,7 @@ function Home() {
                     {item.CategoryName}
                   </div>
                   <hr />
-                  <div  className="d-flex justify-content-around flex-wrap mx-auto">
+             
                   
                   {foodItem !== [] ? (
                     foodItem
@@ -119,7 +119,7 @@ function Home() {
                         return (
                           <div
                             key={filteItems._id}
-                            className=" mx-auto"
+                            className=" col-sm-12 col-md-6 col-lg-3 col-xl-3 mx-auto"
                           >
                             <Card
                           foodItem={filteItems}
@@ -137,7 +137,7 @@ function Home() {
             })
           : ""}
                   </div>
-      </div>
+      
         </div>
   
     </div>
