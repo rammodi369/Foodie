@@ -57,15 +57,19 @@ function Login() {
             <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
+               <div class="input-group" id="show_hide_password">
             <input
               type="password"
               className="form-control"
               name="password"
               onChange={onChange}
-              id="exampleInputPassword1"
+           
               value={credentials.password}
             />
-             <i class="bi bi-eye-slash" id="togglePassword"></i>
+              <div class="input-group-addon">
+        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+      </div>
+    </div>
           </div>
 
           <button  type="submit" className=" m-3 btn btn-success">
