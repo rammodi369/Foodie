@@ -117,7 +117,7 @@ function Home() {
                         return (
                           <div
                             key={filteItems._id}
-                            className="col-12 col-md-6 col-lg-3 "
+                            className="col-12 col-md-6 col-lg-3 col-xl-3 mx-auto"
                           >
                             <Card
                           foodItem={filteItems}
