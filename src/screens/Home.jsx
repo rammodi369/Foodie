@@ -117,7 +117,7 @@ function Home() {
                         return (
                           <div
                             key={filteItems._id}
-                            className="d-flex justify-content-around flex-wrap mx-auto"
+                            className=" mx-auto"
                           >
                             <Card
                           foodItem={filteItems}
