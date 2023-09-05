@@ -65,6 +65,7 @@ function Login() {
               id="exampleInputPassword1"
               value={credentials.password}
             />
+             <i class="bi bi-eye-slash" id="togglePassword"></i>
           </div>
 
           <button  type="submit" className=" m-3 btn btn-success">
