@@ -67,7 +67,7 @@ function Login() {
               value={credentials.password}
             />
               <div className="input-group-addon">
-        <a href=""><i className="fa fa-eye-slash" aria-hidden="true"></i></a>
+        <i className="fa fa-eye-slash" aria-hidden="true"></i>
       </div>
     </div>
           </div>
