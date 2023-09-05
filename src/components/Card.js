@@ -39,7 +39,7 @@ function Card(props) {
         setSize(priceRef.current.value);
     }, [])
     return (
-        <div className="mx-auto">
+        <div className="ml-3">
             <div class="card mt-3" style={{ width: "18rem", maxWeight: "160px" }}>
                 <img
                     src={props.foodItem.img}
