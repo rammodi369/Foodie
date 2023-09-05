@@ -57,7 +57,7 @@ function Login() {
             <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
-               <div class="input-group" id="show_hide_password">
+               <div className="input-group" id="show_hide_password">
             <input
               type="password"
               className="form-control"
@@ -66,8 +66,8 @@ function Login() {
            
               value={credentials.password}
             />
-              <div class="input-group-addon">
-        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              <div className="input-group-addon">
+        <a href=""><i className="fa fa-eye-slash" aria-hidden="true"></i></a>
       </div>
     </div>
           </div>
