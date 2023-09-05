@@ -34,7 +34,7 @@ function Login() {
   };
   return (
     <div>
-      <div className="container">
+      <div>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
@@ -66,7 +66,7 @@ function Login() {
            
               value={credentials.password}
             /> */}
-       <input name="password" type="password" value="" className="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
+       <input name="password" type="password" value={credentials.password}  onChange={onChange} className="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
               <div className="input-group-append">
                 <span className="input-group-text" onclick="password_show_hide();">
                   <i className="fas fa-eye" id="show_eye"></i>
