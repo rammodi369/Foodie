@@ -40,7 +40,7 @@ function Card(props) {
     }, [])
     return (
         <div className="mx-auto">
-            <div className="card mt-3" style={{ width: "18rem", maxWeight: "160px" }}>
+            <div className="card mt-3 mx-auto" style={{ width: "18rem", maxWeight: "160px" }}>
                 <img
                     src={props.foodItem.img}
                     className="card-img-top"
