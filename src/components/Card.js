@@ -40,16 +40,16 @@ function Card(props) {
     }, [])
     return (
         <div className="mx-auto">
-            <div class="card mt-3" style={{ width: "18rem", maxWeight: "160px" }}>
+            <div className="card mt-3" style={{ width: "18rem", maxWeight: "160px" }}>
                 <img
                     src={props.foodItem.img}
-                    class="card-img-top"
+                    className="card-img-top"
                     alt="..."
                     style={{ height: "200px", objectFit: "cover" }}
                 />
-                <div class="card-body">
-                    <h5 class="card-title">{props.foodItem.name}</h5>
-                    <p class="card-text">this is not so important</p>
+                <div className="card-body">
+                    <h5 className="card-title">{props.foodItem.name}</h5>
+                    <p className="card-text">this is not so important</p>
                     <div className="container w-100">
                         <select className="m-2 h-100 bg-success rounded" onChange={(e) => setQty(e.target.value)}>
                             {Array.from(Array(6), (e, i) => {
