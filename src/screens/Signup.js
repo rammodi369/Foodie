@@ -36,7 +36,7 @@ function Signup() {
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
                         <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} />
-
+                          <div id="emailHelp" className="form-text">Name atleast of 5 characters</div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -46,7 +46,8 @@ function Signup() {
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                         <input type="password" className="form-control" name='password' onChange={onChange} id="exampleInputPassword1" value={credentials.password} />
-                    </div>
+                         <div id="emailHelp" className="form-text">Password is atleast of 8 characters</div>           
+        </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label">Address </label>
                         <input type="text" className="form-control" name='geolocation' onChange={onChange} id="exampleInputPassword1" value={credentials.geolocation} />
